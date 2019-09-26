@@ -1,0 +1,18 @@
+<h2>My Heroes</h2>
+<!--Para mostrar listas de valores , ngFor itera en la lista la expresion es parecida a un foreach-->
+<ul class="heroes">
+    <!--(click) escucha el evento click sobre ese tag , dentro de la iteraicion hero es el objeto que toca
+    [class.selected] incluye una condicion y compara el objeto iterado sea igual que el objeto slected [class.estilo] = condicion-->
+    <li *ngFor="let hero of heroes" 
+        (click)="selectHero(hero)"
+        [class.selected]="hero === selectedHero">
+        <span class="badge">{{hero.Id}}</span>
+        <span>{{hero.Name}}</span>
+        <span>           {{hero.Edad}}</span>
+    </li>
+</ul>
+<!--Llamamos a nuestro componente hijo para mostrar los detalles
+[hero] es el nombre la propiedad que informamos en el hijo
+ y le asignamos la variable que queramos desde el padre-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+

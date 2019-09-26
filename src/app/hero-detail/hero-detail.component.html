@@ -1,0 +1,21 @@
+<!--Para que se muestre o no un bloque podemos hacer un if que comprueba si los valores son nulos-->
+<div *ngIf="hero">
+        <!--Utilizamos modificadores "uppercase" de datos de Angular PIPE, para ellos se añade la barra | -->
+        <h2>{{hero.Name | uppercase}} Details!!</h2>
+        <!--Accedemos ala propiedad por que es un objeto-->
+        <div><span>Id:</span>{{hero.Id}}</div>
+        <!---->
+        <div>
+            <label>
+                <span>Name: </span>
+                <!--Para updatear las propiedad utilizamos la expresión ngModel , debe estar inyectado el modulo de forms-->
+                <input type="text" [(ngModel)]="hero.Name" placeholder="name">               
+            </label>
+            <br>
+            <label>
+                    <span>Edad: </span>
+                    <!--Para updatear las propiedad utilizamos la expresión ngModel , debe estar inyectado el modulo de forms-->
+                    <input type="number" [(ngModel)]="hero.Edad" placeholder="edad">
+            </label>
+        </div>
+    </div>
