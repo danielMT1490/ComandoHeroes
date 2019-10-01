@@ -5,6 +5,7 @@ export class Hero{
     Name: string;
     Edad: number;
     
+    //constructor publico con valores nulables
     constructor(
         public id?: number ,
         public name?: string,

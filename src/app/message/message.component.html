@@ -1,0 +1,14 @@
+<!--*ngIf es una condicion booleana la extension messages.lenght devuelve si hay algo en la lista o no-->
+<div *ngIf="messageService.messages.length">
+    <h2>Messages</h2>
+    <!--El evento click del button llama al metodo clear (que es publico) para limpiar los mensajes-->
+    <button class="clear"
+            (click)="messageService.clear()">clear</button>
+    <!--El evento click del button llama al metodo clear (que es publico) para limpiar los mensajes-->
+    <button class="submit"
+    (click)="messageService.add('Add new message')">add</button>
+    <!--*ngFor pinta todo los mensaje que existan (itera en el array)-->
+    <div *ngFor='let message of messageService.messages'> 
+        {{message}} 
+    </div>  
+</div>
