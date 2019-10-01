@@ -1,4 +1,13 @@
 <h1>{{title}}</h1>
+<!--router-outlet hace referencia al modulo de rutas cuando la ruta cambia 
+    inyecta en esta etiqueta el componente registrado con el segmento o segmentos que se añadan-->
+<router-outlet>
+    <nav>
+        <!--routeLinck inyecta el componente que este registrado en el route module
+        sin necesidad de refrescar la pagina como haria un href-->
+        <a routerLink="/heroes">Heroes</a>
+        <a routerLink="/dashboard">Dashboard</a>
+    </nav>
+</router-outlet>
 <!--Llamamos a un componente creamos una etiqueta con el nombre del componente-->
-<app-heroes></app-heroes>
 <app-message></app-message>

@@ -30,4 +30,8 @@ export class HeroService {
     //el operador rxjs of genera un observable de una lista de heroes
     return of(HEROES);
   }
+  //Buscamos un heroe por su id
+  getHero(id: number): Observable<Hero>{
+    return of(HEROES.find(hero => hero.id == id))
+  }
 }
